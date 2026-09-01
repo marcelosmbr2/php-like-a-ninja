@@ -1,0 +1,13 @@
+XAMPP is a bundle with PHP, Apache, MariaDB and Perl.
+
+Installing
+
+Download from apachefriends.org and pick the build with the PHP version you want.
+Note that XAMPP ships whatever PHP version its build was compiled with. You can't simply swap PHP versions inside it, you install a different XAMPP build.
+
+Windows: avoid installing into C:\Program Files — UAC permissions cause write errors. Use C:\xampp.
+
+htdocs is where your projects lives. 
+This folder maps to http://localhost/
+A file at htdocs/php-like-a-ninja/index.php is served at http://localhost/php-like-a-ninja/
+
