@@ -1,13 +1,13 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 class User
 {
-    // A static property is shared by every object of the class.
+    // Uma propriedade estática é compartilhada por todos os objetos da classe.
     private static int $total_users = 0;
 
-    // Instance properties are unique to each object of the class.
+    // As propriedades de instância são únicas para cada objeto da classe.
     private string $name;
     private string $email;
     private string $sex;
@@ -21,13 +21,13 @@ class User
 
     }
 
-    // A static method is called on the class, not on an object.
+    // Um método estático é chamado na classe, não em um objeto.
     public static function getTotalUsers(): int
     {
         return self::$total_users; 
     }
 
-    // An instance method is called on an object of the class.
+    // Um método de instância é chamado em um objeto da classe.
     public function getUser(): array
     {
         return [

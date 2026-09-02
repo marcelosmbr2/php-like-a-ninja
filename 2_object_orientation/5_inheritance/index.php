@@ -1,8 +1,8 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// Inheritance: a child class reuses everything the parent has.
+// Herança: a classe filha reaproveita tudo o que a classe pai tem.
 class Character
 {
 
@@ -20,7 +20,7 @@ class Character
     }
 }
 
-// "extends" creates the child class.
+// "extends" cria a classe filha.
 class Samurai extends Character
 {
 
@@ -28,12 +28,12 @@ class Samurai extends Character
 
     public function __construct(string $name, string $sword)
     {
-        // parent:: calls the parent implementation.
+        // parent:: chama a implementação da classe pai.
         parent::__construct($name);
         $this->sword = $sword;
     }
 
-    // Overriding: the child replaces the parent behaviour.
+    // Sobrescrita: a filha substitui o comportamento do pai.
     public function present(): string
     {
         return parent::present() . " and my sword is the " . $this->sword . ".";
@@ -45,5 +45,5 @@ echo (new Character("Villager"))->present() . "\n";
 $samurai = new Samurai("Musashi", "Nodachi");
 echo $samurai->present() . "\n";
 
-// A child is also an instance of the parent.
+// Uma filha também é uma instância do pai.
 var_dump($samurai instanceof Character);

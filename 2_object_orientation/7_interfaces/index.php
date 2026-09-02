@@ -1,9 +1,9 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// An interface is a contract: only method signatures, no implementation.
-// It says WHAT a class must do, never HOW.
+// Uma interface é um contrato: só as assinaturas dos métodos, sem implementação.
+// Ela diz O QUE a classe precisa fazer, nunca COMO.
 interface Worker
 {
     public function job(): string;
@@ -14,7 +14,7 @@ interface Studious
     public function study(): string;
 }
 
-// A class can implement many interfaces (it can extend only one class).
+// Uma classe pode implementar várias interfaces (mas estender só uma classe).
 class Student implements Worker, Studious
 {
     public function job(): string

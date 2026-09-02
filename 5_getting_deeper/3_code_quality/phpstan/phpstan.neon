@@ -1,0 +1,6 @@
+parameters:
+    # Os níveis vão de 0 (frouxo) a 10 (estrito). Comece baixo e suba devagar.
+    level: 5
+    paths:
+        - app
+        - index.php

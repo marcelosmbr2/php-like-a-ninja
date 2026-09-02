@@ -1,6 +1,6 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 $age = 20;
 
@@ -16,11 +16,11 @@ if ([1, 2]) {
     echo "A non empty array is truthy\n";
 }
 
-// Ternary for short decisions
+// Ternário: um if/else curto que devolve um valor
 $status = $age >= 18 ? "adult" : "minor";
 echo "$status\n";
 
-// switch compares loosely (==) and needs break.
+// switch compara de forma frouxa (==) e precisa de break.
 $role = "editor";
 
 switch ($role) {
@@ -35,7 +35,7 @@ switch ($role) {
         echo "Read only\n";
 }
 
-// match compares strictly (===), returns a value and needs no break.
+// match compara de forma estrita (===), devolve um valor e dispensa break.
 $level = match ($role) {
     "admin" => 3,
     "editor", "author" => 2,
@@ -43,7 +43,7 @@ $level = match ($role) {
 };
 echo "Level: $level\n";
 
-// Alternative syntax, handy when mixing with HTML.
+// Sintaxe alternativa, útil quando o PHP se mistura com HTML.
 if ($isActive):
     echo "Active\n";
 else:

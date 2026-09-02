@@ -1,7 +1,7 @@
 <?php
 
-// The "App\" prefix points to the app/ folder in composer.json,
-// so App\Models\User must live in app/Models/User.php.
+// O prefixo "App\" aponta para a pasta app/ no composer.json,
+// então App\Models\User precisa morar em app/Models/User.php.
 namespace App\Models;
 
 class User

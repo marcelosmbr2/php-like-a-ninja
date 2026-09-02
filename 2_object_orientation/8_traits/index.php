@@ -1,9 +1,9 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// A trait is a block of code copied into a class. Use it to reuse
-// behaviour between classes that do not share a parent.
+// Uma trait é um bloco de código copiado para dentro da classe. Use para
+// reaproveitar comportamento entre classes que não têm um pai em comum.
 trait Greets
 {
     public function greet(): string

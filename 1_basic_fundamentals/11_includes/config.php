@@ -1,6 +1,6 @@
 <?php
 
-// A file that returns an array is a common way to keep configuration.
+// Um arquivo que retorna um array é a forma usual de guardar configuração.
 
 return [
     "app_name" => "PHP Like a Ninja",

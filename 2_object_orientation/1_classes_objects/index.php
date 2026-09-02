@@ -1,14 +1,14 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// A class is the blueprint. An object is an instance created from it.
+// A classe é a planta. O objeto é uma instância criada a partir dela.
 class Ninja
 {
-    // Properties hold the state of each object.
+    // As propriedades guardam o estado de cada objeto.
     public string $name = "Anonymous";
 
-    // Methods are the behaviour of the object.
+    // Os métodos são o comportamento do objeto.
     public function attack(): string
     {
         return $this->name . " attacks!";
@@ -20,6 +20,6 @@ $first->name = "Hanzo";
 
 echo $first->attack() . "\n";
 
-// $this inside the class always points to the current object.
+// $this dentro da classe sempre aponta para o objeto atual.
 var_dump($first instanceof Ninja);
 echo $first::class . "\n";

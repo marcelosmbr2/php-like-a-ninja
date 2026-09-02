@@ -1,6 +1,6 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 function greet()
 {
@@ -9,7 +9,7 @@ function greet()
 
 greet();
 
-// Parameters and return
+// Parâmetros e retorno
 function sum($a, $b)
 {
     return $a + $b;
@@ -17,7 +17,7 @@ function sum($a, $b)
 
 echo sum(2, 3) . "\n";
 
-// Typed parameters and return type
+// Parâmetros tipados e tipo de retorno
 function multiply(int $a, int $b): int
 {
     return $a * $b;
@@ -25,7 +25,7 @@ function multiply(int $a, int $b): int
 
 echo multiply(3, 4) . "\n";
 
-// Default values: they must come after the required ones.
+// Valores padrão: precisam vir depois dos parâmetros obrigatórios.
 function greetUser(string $name, string $greeting = "Hello"): string
 {
     return "$greeting, $name!";
@@ -34,7 +34,7 @@ function greetUser(string $name, string $greeting = "Hello"): string
 echo greetUser("John") . "\n";
 echo greetUser("Jane", "Hi") . "\n";
 
-// Nullable type and union type
+// Tipo nullable (?int) e union type (int|float)
 function findAge(?int $age): string
 {
     return $age === null ? "unknown" : "$age years";
@@ -49,7 +49,7 @@ function format(int|float $value): string
 
 echo format(10.5) . "\n";
 
-// Variadic: receives the remaining arguments as an array.
+// Variadic: recebe os argumentos restantes como um array.
 function total(int ...$numbers): int
 {
     return array_sum($numbers);
@@ -58,16 +58,16 @@ function total(int ...$numbers): int
 echo total(1, 2, 3, 4) . "\n";
 echo total(...[5, 5]) . "\n";
 
-// Arrow function
+// Arrow function: forma curta, com retorno implícito
 $double = fn(int $n): int => $n * 2;
 echo $double(21) . "\n";
 
-// Functions as arguments (callbacks)
+// Funções como argumento (callbacks)
 $numbers = [1, 2, 3, 4];
 print_r(array_map(fn($n) => $n ** 2, $numbers));
 print_r(array_filter($numbers, fn($n) => $n > 2));
 
-// A function can return another function.
+// Uma função pode devolver outra função.
 function makeMultiplier(int $factor): callable
 {
     return fn(int $n): int => $n * $factor;
@@ -76,7 +76,7 @@ function makeMultiplier(int $factor): callable
 $triple = makeMultiplier(3);
 echo $triple(5) . "\n";
 
-// Recursion: the function calls itself and needs a stop condition.
+// Recursão: a função chama a si mesma e precisa de uma condição de parada.
 function factorial(int $n): int
 {
     if ($n <= 1) {

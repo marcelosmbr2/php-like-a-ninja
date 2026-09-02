@@ -1,6 +1,6 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 $name = "John Doe";
 $email = "john.doe@gmail.com";

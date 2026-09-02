@@ -1,36 +1,36 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 $file = __DIR__ . '/notes.txt';
 
-// Write (creates the file, overwrites if it exists).
+// Escrever (cria o arquivo, sobrescreve se já existir).
 file_put_contents($file, "first line\n");
 
-// Append.
+// Acrescentar ao final, sem apagar o que já estava lá.
 file_put_contents($file, "second line\n", FILE_APPEND);
 
-// Read the whole file at once.
+// Ler o arquivo inteiro de uma vez.
 echo file_get_contents($file);
 
-// Read line by line into an array.
+// Ler linha a linha para dentro de um array.
 $lines = file($file, FILE_IGNORE_NEW_LINES);
 foreach ($lines as $i => $line) {
     echo ($i + 1) . ": $line\n";
 }
 
-// Check before reading.
+// Conferir se existe antes de ler.
 if (file_exists($file)) {
     echo "Size: " . filesize($file) . " bytes\n";
 }
 
-// Handle-based reading, useful for big files.
+// Leitura por handle: não carrega tudo na memória, ideal para arquivos grandes.
 $handle = fopen($file, 'r');
 while (($line = fgets($handle)) !== false) {
     echo "read: " . trim($line) . "\n";
 }
 fclose($handle);
 
-// Clean up.
+// Limpar: unlink apaga o arquivo.
 unlink($file);
 echo "File removed: " . (file_exists($file) ? 'no' : 'yes') . "\n";

@@ -1,6 +1,6 @@
 <?php
 
-// Functions and constants declared here become available after the include.
+// Funções e constantes daqui ficam disponíveis depois do include.
 
 const APP_AUTHOR = "Ninja";
 

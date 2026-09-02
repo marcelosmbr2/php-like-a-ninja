@@ -1,8 +1,8 @@
-Laragon is a Windows-only development environment that bundles separate tools like Apache or Nginx, PHP and MariaDB.
+Laragon é um ambiente de desenvolvimento só para Windows que reúne ferramentas separadas como Apache ou Nginx, PHP e MariaDB.
 
-Installing
-Download from laragon.org — the Full edition includes PHP, MySQL, Node and Composer; Lite is Apache + PHP only
-Install to a path without spaces: C:\laragon is the safe default.
+Instalando
+Baixe em laragon.org — a edição Full inclui PHP, MySQL, Node e Composer; a Lite é só Apache + PHP
+Instale em um caminho sem espaços: C:\laragon é a escolha segura.
 
-Your projects lives on "www" folder.
+Seus projetos ficam na pasta "www".
 

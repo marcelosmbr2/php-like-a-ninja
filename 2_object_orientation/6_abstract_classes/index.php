@@ -1,9 +1,9 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// An abstract class is a partial class: it cannot be instantiated and
-// exists only to be extended. Use it to share code between children.
+// Uma classe abstrata é uma classe pela metade: não pode ser instanciada e
+// existe só para ser estendida. Use para compartilhar código entre as filhas.
 abstract class Person
 {
     protected string $name;
@@ -13,10 +13,10 @@ abstract class Person
         $this->name = $name;
     }
 
-    // An abstract method has no body: every child must implement it.
+    // Um método abstrato não tem corpo: toda filha é obrigada a implementá-lo.
     abstract public function job(): string;
 
-    // A concrete method is inherited as it is.
+    // Um método concreto é herdado do jeito que está.
     public function present(): string
     {
         return $this->name . " works as a " . $this->job() . ".\n";
@@ -33,4 +33,4 @@ class Student extends Person
 
 echo (new Student("Marcelo"))->present();
 
-// new Person("Anyone") would throw: cannot instantiate abstract class.
+// new Person("Qualquer") daria erro: não se instancia uma classe abstrata.

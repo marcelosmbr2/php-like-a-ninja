@@ -1,0 +1,10 @@
+{
+    "name": "ninja/php-cs-fixer-example",
+    "type": "project",
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0"
+    }
+}

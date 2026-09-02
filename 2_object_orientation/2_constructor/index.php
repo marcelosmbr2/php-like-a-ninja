@@ -1,13 +1,13 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 class Weapon
 {
     public string $name;
     public int $damage;
 
-    // The constructor runs automatically when the object is created.
+    // O construtor roda automaticamente quando o objeto é criado.
     public function __construct(string $name, int $damage)
     {
         $this->name = $name;

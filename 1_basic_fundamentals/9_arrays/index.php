@@ -1,14 +1,14 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// Indexed array: keys start at 0.
+// Array indexado: as chaves começam em 0.
 $languages = ["PHP", "JavaScript", "Go"];
 
 echo $languages[0] . "\n";
 echo count($languages) . "\n";
 
-// Associative array: your own keys.
+// Array associativo: você escolhe as chaves.
 $user = [
     "name" => "John",
     "age" => 30,
@@ -17,7 +17,7 @@ $user = [
 
 echo $user["name"] . "\n";
 
-// Multidimensional array
+// Array multidimensional: um array dentro do outro
 $users = [
     ["name" => "John", "age" => 30],
     ["name" => "Jane", "age" => 25],

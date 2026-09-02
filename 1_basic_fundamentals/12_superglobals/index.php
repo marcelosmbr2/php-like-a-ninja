@@ -1,33 +1,33 @@
 <?php
 
-// Superglobals are arrays available in any scope.
-// Run a server to see them filled: php -S localhost:8000
-// Then open: http://localhost:8000/?name=Ninja
+// Superglobals são arrays disponíveis em qualquer escopo.
+// Suba um servidor para vê-las preenchidas: php -S localhost:8000
+// Depois abra: http://localhost:8000/?name=Ninja
 
-// $_SESSION is the only superglobal PHP does not fill by itself.
-// session_start() reads the PHPSESSID cookie, loads the stored data
-// into $_SESSION, and sends a Set-Cookie header when the session is new.
-// Headers must go before the body, so call it before any output
+// $_SESSION é a única superglobal que o PHP não preenche sozinho.
+// session_start() lê o cookie PHPSESSID, carrega os dados guardados
+// em $_SESSION e envia um header Set-Cookie quando a sessão é nova.
+// Headers vão antes do corpo, então chame antes de qualquer saída
 session_start();
 
-// $_GET: data from the query string (?name=Ninja).
+// $_GET: dados vindos da query string (?name=Ninja).
 echo ($_GET["name"] ?? "guest") . "\n";
 
-// $_POST: data sent by a form with method="post".
+// $_POST: dados enviados por um formulário com method="post".
 echo ($_POST["email"] ?? "no email") . "\n";
 
-// $_SERVER: information about the request and the environment.
+// $_SERVER: informações sobre a requisição e o ambiente.
 echo ($_SERVER["REQUEST_METHOD"] ?? "CLI") . "\n";
 
-// $_COOKIE: cookies sent by the browser, written with setcookie.
+// $_COOKIE: cookies enviados pelo navegador, gravados com setcookie.
 echo ($_COOKIE["theme"] ?? "no cookie") . "\n";
 
-// $_SESSION: data kept between requests.
+// $_SESSION: dados mantidos entre uma requisição e outra.
 $_SESSION["visits"] = ($_SESSION["visits"] ?? 0) + 1;
 echo "Visits: {$_SESSION["visits"]}\n";
 
-// $_FILES: files sent by a form with enctype="multipart/form-data".
+// $_FILES: arquivos enviados por um form com enctype="multipart/form-data".
 print_r($_FILES);
 
-// Never trust input: always validate and escape before using it.
+// Nunca confie na entrada: valide e escape antes de usar.
 echo htmlspecialchars($_GET["name"] ?? "") . "\n";

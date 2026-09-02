@@ -1,1 +1,0 @@
-// SQL injection, XSS, CSRF, password_hash/verify, validação e sanitização, htmlspecialchars

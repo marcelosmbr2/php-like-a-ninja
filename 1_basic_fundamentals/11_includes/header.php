@@ -1,5 +1,5 @@
 <?php
 
-// An included file shares the variables of the file that included it.
+// Um arquivo incluído compartilha as variáveis de quem o incluiu.
 
 echo "=== {$title} ===\n";

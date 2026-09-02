@@ -1,27 +1,27 @@
 <?php
 
-// Setup (only once, in this folder):
-//   composer install          installs what composer.json requires
-//   composer require vendor/package   adds a new dependency
+// Setup (só uma vez, nesta pasta):
+//   composer install          instala o que o composer.json exige
+//   composer require vendor/package   adiciona uma nova dependência
 //
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// This single line replaces every require: Composer generates an autoloader
-// that knows both the installed packages and your own "App\" classes.
+// Esta única linha substitui todos os require: o Composer gera um autoloader
+// que conhece tanto os pacotes instalados quanto as suas classes "App\".
 require __DIR__ . "/vendor/autoload.php";
 
 use App\Models\User;
 use Ramsey\Uuid\Uuid;
 
-// Uuid comes from the ramsey/uuid package, downloaded into vendor/.
+// Uuid vem do pacote ramsey/uuid, baixado dentro de vendor/.
 $id = Uuid::uuid4()->toString();
 
-// User is our own class in app/Models/User.php, mapped by the psr-4 section.
+// User é a nossa classe em app/Models/User.php, mapeada pela seção psr-4.
 $user = new User($id, "Ninja");
 
 echo $user->id . "\n";
 echo $user->name . "\n";
 echo $user::class . "\n";
 
-// composer.json  lists what you want, composer.lock pins the exact versions.
-// vendor/ is generated, so it is never committed (see .gitignore).
+// composer.json  lista o que você quer, composer.lock trava as versões exatas.
+// vendor/ é gerado, por isso nunca vai para o commit (veja o .gitignore).

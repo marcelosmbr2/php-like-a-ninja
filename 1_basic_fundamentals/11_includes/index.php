@@ -1,19 +1,19 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// require stops the script if the file is missing, include only warns.
+// require aborta o script se o arquivo faltar, include apenas avisa.
 require "helpers.php";
 
-// The _once versions load the file only the first time.
+// As versões _once carregam o arquivo apenas na primeira vez.
 include "message.php";
-include_once "message.php"; // ignored, it was already loaded
+include_once "message.php"; // ignorado, o arquivo já tinha sido carregado
 
-// The included file sees the variables declared before the include.
+// O arquivo incluído enxerga as variáveis declaradas antes do include.
 $title = "Included Header";
 include "header.php";
 
-// A file that returns a value can be captured in a variable.
-// __DIR__ makes the path safe from any working directory.
+// Um arquivo que retorna um valor pode ser capturado em uma variável.
+// __DIR__ garante o caminho certo a partir de qualquer diretório.
 $config = require __DIR__ . "/config.php";
 echo $config["app_name"] . " " . $config["version"] . "\n";

@@ -1,13 +1,13 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
-// Encapsulation: hide the state, expose only safe behaviour.
+// Encapsulamento: esconda o estado, exponha só o comportamento seguro.
 class BankAccount
 {
-    // public    -> anyone can access
-    // protected -> the class and its children
-    // private   -> only this class
+    // public    -> qualquer um acessa
+    // protected -> a classe e suas filhas
+    // private   -> somente esta classe
     private int $balance = 0;
 
     public function deposit(int $amount): void

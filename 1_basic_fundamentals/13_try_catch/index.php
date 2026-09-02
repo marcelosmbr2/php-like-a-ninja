@@ -1,6 +1,6 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 try {
     $result = 10 / 0;
@@ -8,7 +8,7 @@ try {
     echo "Error: " . $e->getMessage() . "\n";
 }
 
-// throw creates the error yourself.
+// throw é você mesmo lançando o erro.
 function divide(int $a, int $b): float
 {
     if ($b === 0) {

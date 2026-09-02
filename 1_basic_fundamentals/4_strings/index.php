@@ -1,43 +1,43 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 $name = "John Doe";
 $age = 30;
 
-// Single quotes: literal, no interpolation or escape sequences.
+// Aspas simples: literal, sem interpolação nem escape sequences.
 echo 'Name: $name' . "\n";
 
-// Double quotes: interpolation and escape sequences (\n, \t, \\, \").
+// Aspas duplas: interpolam variáveis e escape sequences (\n, \t, \\, \").
 echo "Name: $name\n";
 echo "Age:\t$age\n";
 echo "She said: \"hello\"\n";
 
-// Curly braces when the variable touches other characters or is complex.
+// Chaves quando a variável encosta em outros caracteres ou é complexa.
 echo "{$name}'s profile\n";
 
 $user = ["name" => "Jane", "roles" => ["admin", "editor"]];
 echo "User: {$user['name']} - {$user['roles'][0]}\n";
 
-// Concatenation with . and .=
+// Concatenação com . e .=
 $first = "PHP";
 $last = "Ninja";
 $full = $first . " Like a " . $last;
 $full .= "!";
 echo $full . "\n";
 
-// Heredoc: interpolates like double quotes.
+// Heredoc: bloco de texto que interpola, como as aspas duplas.
 $text = <<<TEXT
 Name: $name
 Age: $age
 TEXT;
 echo $text . "\n";
 
-// Nowdoc: literal like single quotes.
+// Nowdoc: bloco literal, como as aspas simples.
 $raw = <<<'TEXT'
 No interpolation here: $name
 TEXT;
 echo $raw . "\n";
 
-// Formatting
+// Formatação: printf monta a string a partir de marcadores como %x e %05d
 printf("Hex: %x | Padded: %05d\n", 255, 42);

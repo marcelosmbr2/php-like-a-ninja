@@ -1,6 +1,6 @@
 <?php
 
-// Execute with the command: php index.php
+// Execute com o comando: php index.php
 
 enum Status
 {
@@ -14,7 +14,7 @@ $status = Status::Published;
 echo $status->name . "\n";
 var_dump($status === Status::Published);
 
-// A backed enum has a value behind each case (string or int).
+// Uma backed enum guarda um valor atrás de cada case (string ou int).
 enum Role: string
 {
     case Admin = "admin";
